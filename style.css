@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
+}
+body {
+    text-align: center;
+    min-height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    background-color: rgb(15, 22, 26);
+    
+}
+h1 {
+    padding: 3rem;
+    font-size: 4rem;
+    color: #eb3333;
+}
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.computer {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#playerScore {
+    width: 10vw;
+    padding-right: 5rem;
+    font-size: 3rem;
+}
+#computerScore {
+    width: 10vw;
+    padding-right: 5rem;
+    font-size: 3rem;
+}
+#result {
+    margin: 5rem 0;
+    padding: 1rem;
+    font-size: 3rem;
+    color:  #3500d3
+}
+
+main div button {
+    border: none;
+    margin: 0 1vw;
+    height: 20vh;
+    width: 15vw;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    background-color: #5cdb95;
+    /* background-color: #b8433f;  */
+}
+main div img {
+    width: 25vh;
+    height: auto;
+    padding-right: 4rem;
+}
