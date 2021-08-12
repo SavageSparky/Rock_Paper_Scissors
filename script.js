@@ -6,12 +6,15 @@ let score = {
 function computerPlay() {
     const options = ["rock", "paper", "scissors"];
     const i = Math.floor(Math.random()*3);
-    // computerButton(option[i]);
+    computerButton(options[i]);
     return options[i];
 }
 function computerButton(computerOption) {
-    document.getElementsByClassName(computerOption).style.backgroundColor = 'yellow';
-    setTimeout(changeColor, 500, selectedOption);
+    document.querySelector("."+computerOption).style.backgroundColor = 'yellow';
+    setTimeout(changeColorCpu, 500, computerOption);
+}
+function changeColorCpu(computerOption) {
+    document.querySelector("."+computerOption).style.backgroundColor = '#5cdb95';
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -20,27 +23,27 @@ function playRound(playerSelection, computerSelection) {
     }
     else if(playerSelection == "rock" && computerSelection == "paper") {
         score.computer++;
-        return ("You Lose! Paper beats Rock");
+        return ("You Lose!");
     }
     else if(playerSelection == "paper" && computerSelection == "rock") {
         score.player++;
-        return ("You Win! Paper beats Rock");
+        return ("You Win!");
     }
     else if(playerSelection == "rock" && computerSelection == "scissors") {
         score.player++;
-        return ("You Win! Rock beats scissors");
+        return ("You Win!");
     }
     else if(playerSelection == "scissors" && computerSelection == "rock") {
         score.computer++;
-        return ("You Lose! Rock beats scissors");
+        return ("You Lose!");
     }
     else if(playerSelection == "scissors" && computerSelection == "paper") {
         score.player++;
-        return ("You Win! Scissors beats paper");
+        return ("You Win!");
     }
     else if(playerSelection == "paper" && computerSelection == "scissors") {
         score.computer++;
-        return ("You Lose! Scissors beats paper");
+        return ("You Lose!");
     }
 }
 
@@ -57,7 +60,7 @@ function playerPlay(selectedOption) {
 
 function buttonFunction(selectedOption) {
     document.getElementById(selectedOption).style.backgroundColor = 'yellow';
-    t = setTimeout(changeColor, 500, selectedOption);
+    setTimeout(changeColor, 500, selectedOption);
 }
 
 function changeColor(selectedOption) {
